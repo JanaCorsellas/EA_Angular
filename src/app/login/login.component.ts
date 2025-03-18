@@ -12,6 +12,9 @@ import { OnInit } from '@angular/core';
   standalone: true
 })
 export class LoginComponent implements OnInit {
+  
+
+
 
   date: Date = new Date("2025-08-14");
   Prova: string = "Este texto deberia estar en mayusculas";

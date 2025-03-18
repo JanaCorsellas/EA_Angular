@@ -1,31 +1,31 @@
 <div class="container">
   <form [formGroup]="registroForm" (ngSubmit)="registrarUsuario()">
-    <h1>Registro de Usuario</h1>
+    <h1>Registre d'un usuari</h1>
     <div class="mb-3">
       <label for="username" class="form-label">Nom d'usuari:</label>
       <input type="text" id="username" class="form-control" formControlName="username">
-      <div class="text-danger" *ngIf="registroForm.get('username')?.invalid && registroForm.get('username')?.touched">Nombre requerido.</div>
+      <div class="text-danger" *ngIf="registroForm.get('username')?.invalid && registroForm.get('username')?.touched">(Nom d'usuari requerit.)</div>
     </div>
 
     <div class="mb-3">
-      <label for="age" class="form-label">Edad:</label>
+      <label for="age" class="form-label">Edat:</label>
       <input type="number" id="age" class="form-control" formControlName="age">
-      <div class="text-danger" *ngIf="registroForm.get('age')?.invalid && registroForm.get('age')?.touched">Edad inválida.</div>
+      <div class="text-danger" *ngIf="registroForm.get('age')?.invalid && registroForm.get('age')?.touched">Edat incorrecte.</div>
     </div>
 
     <div class="mb-3">
       <label for="email" class="form-label">Email:</label>
       <input type="email" id="email" class="form-control" formControlName="email">
-      <div class="text-danger" *ngIf="registroForm.get('email')?.invalid && registroForm.get('email')?.touched">Email inválido.</div>
+      <div class="text-danger" *ngIf="registroForm.get('email')?.invalid && registroForm.get('email')?.touched">Email incorrecte.</div>
     </div>
 
     <div class="mb-3">
-      <label for="password" class="form-label">Contraseña:</label>
+      <label for="password" class="form-label">Contrasenya:</label>
       <input type="password" id="password" class="form-control" formControlName="password">
-      <div class="text-danger" *ngIf="registroForm.get('password')?.invalid && registroForm.get('password')?.touched">Debe tener al menos 8 caracteres.</div>
+      <div class="text-danger" *ngIf="registroForm.get('password')?.invalid && registroForm.get('password')?.touched">Ha de tenir almenys 8 caràcters.</div>
     </div>
 
-    <button type="submit" class="btn btn-primary" [disabled]="registroForm.invalid">Registrarse</button>
+    <button type="submit" class="btn btn-primary" [disabled]="registroForm.invalid">Registrar-se</button>
   </form>
 </div>
 `;

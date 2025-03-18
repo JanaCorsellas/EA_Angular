@@ -23,20 +23,3 @@ export class AppComponent {
     this.showRegister = !this.showRegister;
   }
 }
-
-/*@NgModule({
-  declarations: [
-    AppComponent,
-    RegisterComponent,
-    UsuarioComponent,
-    LoginComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    RouterOutlet
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }*/

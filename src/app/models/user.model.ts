@@ -1,18 +1,5 @@
-/*export interface User {
-    id: number;
-    name: string;
-    age: number;
-    email: string;
-  }
-export class User implements User {
-    constructor(     
-      
-    ) {}
-}*/
-
 import mongoose from 'mongoose';
 
-// Definir el esquema del usuario
 const userSchema = new mongoose.Schema({
   username: {
     type: String,
