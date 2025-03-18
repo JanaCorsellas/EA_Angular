@@ -1,9 +1,17 @@
+<button (click)="toggleRegister()" class="btn btn-secondary">
+  {{ showRegister ? 'Ir a Login' : 'Ir a Registro' }}
+</button>
+
 @if(loggedin)
 {
     <app-usuario></app-usuario>
 }
-@else  {
-    <app-login (exportLoggedIn)="getLoggedIn($event)"></app-login>
+@else {
+    @if (showRegister) {
+      <app-register></app-register>
+    } @else {
+      <app-login (exportLoggedIn)="getLoggedIn($event)"></app-login>
+    }
 }
 
 <router-outlet />

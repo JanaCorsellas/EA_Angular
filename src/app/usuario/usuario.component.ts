@@ -17,7 +17,7 @@ export class UsuarioComponent {
   
   usuario: User = {
     id: 1,
-    name: "Toni",
+    username: "Toni",
     age: 40,
     email: "toni.oller@gmail.com",
   };
@@ -31,8 +31,8 @@ export class UsuarioComponent {
     this.mostrardata = true;
   }
 
-  getName(Name: string){
-    this.usuario.name = Name;
+  getUsername(Username: string){
+    this.usuario.username = Username;
   }
 
 }

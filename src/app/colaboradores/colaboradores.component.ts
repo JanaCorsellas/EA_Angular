@@ -18,7 +18,7 @@ export class ColaboradoresComponent {
   users: User [];
   query = 'b';
   //Para recibir el usuario que proviene del componente usuario
-  @Input() usuario: User = new User();
+  @Input() usuario: User = { id: 0, username: '', age: 0, email: '' };
 
   constructor() {
     this.users = [];
@@ -52,9 +52,9 @@ export class ColaboradoresComponent {
   }
 
   //Cuando se hace click en el nombre de algun usuario listado se pasa el nombre de este al componente usuario, que canviara el nombre del usuario al del listado.
-  @Output() changeNameEvent = new EventEmitter<string>();
-  changeName(Name: string){
-    this.changeNameEvent.emit(Name);
+  @Output() changeUsernameEvent = new EventEmitter<string>();
+  changeUsername(Username: string){
+    this.changeUsernameEvent.emit(Username);
   }
 
   //Para poder usar el componente de dialogo de confirmación
